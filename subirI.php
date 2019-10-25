@@ -1,6 +1,7 @@
 <?php
 $link = mysqli_connect('localhost', 'root', '', 'socialg');
-
+session_start();
+$usuario = $_SESSION['username'];
 //Recogida de datos
 $nombre = $_REQUEST['nombre'];
 $desc = $_REQUEST['desc'];
@@ -30,7 +31,13 @@ if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
 </head>
 <!-- Header de todas las páginas web -->
 <body>
-    <header class="header">
+    <header class="header">';
+
+    echo "<div class='logeado'> 
+            <a>Estás logeado como ".$usuario."</a> 
+            <a href='header.php'>(Cerrar Sesión)</a>
+                </div>";
+echo '
         <div class="tabla">
                 <nav class="navigation">
                 <ul>
@@ -41,6 +48,20 @@ if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
         </div>
         </header>
         <div class="panel">';
+
+        $id_usu = "SELECT * FROM usuarios";
+
+        $idquery= mysqli_query($link, $id_usu);
+
+
+while ($insertarid=mysqli_fetch_array($idquery)) {
+
+            $nombreid=$insertarid['user'];
+            if ($nombreid == $usuario) {
+            $insertid=$insertarid['id_usu'];
+            }
+}
+
     echo "</br>";
     echo "La ruta es: ".$target_path;
     echo "</br>";
@@ -51,12 +72,13 @@ if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
     echo "Subido en la fecha".$fecha;
     echo "</br>";
     echo '<a href="index.php"> Volver al inicio </a>';
+    echo "La id es: ".$insertid;
     echo "</div>
     </body>
 </html>";
 //Insertar todo en la Base de Datos
 
-$query = "INSERT INTO gallery (namegallery, pathgallery, descgallery, dategallery) VALUES ('$nombre', '$target_path', '$desc', '$fecha')";
+$query = "INSERT INTO gallery (namegallery, pathgallery, descgallery, dategallery, id_usu) VALUES ('$nombre', '$target_path', '$desc', '$fecha','$insertid')";
 
 $insertar = mysqli_query($link, $query);
 echo "<";
