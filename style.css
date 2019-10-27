@@ -1,26 +1,11 @@
 html{
-  background: lightblue url("https://wallpaperplay.com/walls/full/c/8/8/98520.jpg") no-repeat fixed center;
+  background: lightblue url("https://hdqwalls.com/download/polygonal-abstract-red-dark-background-eo-1920x1080.jpg") no-repeat fixed center;
 }
 
 
 body {
 font-family: georgia;
 
-}
-.header a {
-	color: white;
-	text-decoration: none;
-	padding-left: 10px;
-	}
-
-.header { 	
-	background: #333;
-	color: white;
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-  	z-index: 1;
 }
 
 .tabla {
@@ -31,24 +16,8 @@ font-family: georgia;
 	max-width: 850px;
 	margin: 0 auto;
 	margin-top: -1.5%;
+	padding-bottom: 1.5
 
-}
-
-.panel {
-	background-color:rgba(214,219,222,0.75);
-	margin-top: 20%;
-	padding-top: 0.5%;
-	padding-bottom: 1%;
-	width: 23%;
-	align-items: center;
-	margin-left: 40%;
-	border-radius: 5%;
-	text-align: justify;
-}
-
-h3.panel {
-	font-family: Arial;
-	font
 }
 
 h1.contenedortodo {
@@ -67,72 +36,6 @@ h1.contenedortodo {
 	float: center;
 }
 
-.imagen {
-	max-width: 360px;
-    max-height: 360px;
-    border-radius: 4%;
-    margin-left: auto;
-   	margin-right: auto;
-    display: block;
-
-    margin-top: 10%;
-}
-
-
-
-/* Esto es para cada contenedor de Imagen, titulo y fecha */
-
-.cajaF {
-	background-color:rgba(214,219,222,0.75);
-	margin-left: 11%;
-	margin-right: 5%;
-	margin-top: 3%;
-	border-radius: 5px;
-	border: black 1px solid;
-	float: left;
-	align-items: center;
-	width: 30%;
-	height: auto;
-
-}
-
-h3.nombre{
-	padding-top: 0.1%;
-	text-align: center;
-	font-size: 25px;
-
-}
-
-h3.desc{
- 	text-align: center;
- 	font-size: 18px;
-}	
-
-h3.fecha{
- 	text-align: center;
- 	font-size: 10px;
-}
-
-.filtro {
-text-align: center;
-}
-
-.logeado{
-	margin-left: 82.5%;
-	margin-top: 0.3%;
-}
-
-.tablaotros {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 75%;
-	max-width: 850px;
-	margin: 0 auto;
-	margin-top: 0%;
-
-}
-
 .header2 a {
 	color: white;
 	text-decoration: none;
@@ -148,28 +51,34 @@ text-align: center;
 	right: 0;
 	height: 5.5%;
   	z-index: 1;
+  	padding-top: 1%;
 }
 
 .panel2 {
 	font-family: arial;
-	background-color:rgba(214,219,222,0.75);
-	margin-top: 20%;
+	background-color:rgba(214,219,222,0.50);
+	margin-top: 10%;
 	padding-top: 0.5%;
 	padding-bottom: 1%;
-	width: 23%;
+	width: 80%;
 	text-align: center;
-	margin-left: 40%;
+	margin-left: 10%;
 	border-radius: 5%;
 }
 
-.mensaje {
-			display: none;
-			border: black 1px solid;
-			border-radius: 8px;
-			margin-left: 6%;
-			margin-right: 6%;
-			padding-top:2%;
-			padding-bottom: 2%;
-			background-color:rgba(254,0,0,0.40);
-			width: auto;
-			}
+.panel2 p {
+	font-size: 21;
+	padding-left: 4%;
+	padding-right: 2%;
+
+}
+
+.imagen {
+	max-width: 70%;
+	border-radius: 1%;
+	margin-left: 2%;
+}
+
+.peque p {
+	font-size: 16;
+}
